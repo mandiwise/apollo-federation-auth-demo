@@ -13,12 +13,12 @@ const isAuthenticated = rule()((parent, args, { user }) => {
 
 const canReadAnyAccount = rule()((parent, args, { user }) => {
   const userPermissions = getPermissions(user);
-  return userPermissions && userPermissions.includes("read:any_account");
+  return userPermissions.includes("read:any_account");
 });
 
 const canReadOwnAccount = rule()((parent, args, { user }) => {
   const userPermissions = getPermissions(user);
-  return userPermissions && userPermissions.includes("read:own_account");
+  return userPermissions.includes("read:own_account");
 });
 
 const isReadingOwnAccount = rule()((parent, { id }, { user }) => {

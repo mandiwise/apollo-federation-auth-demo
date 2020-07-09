@@ -32,18 +32,18 @@ const resolvers = {
     }
   },
   Query: {
-    account(_, { id }) {
+    account(parent, { id }) {
       return accounts.find(account => account.id === id);
     },
     accounts() {
       return accounts;
     },
-    viewer(_, { id }, { user }) {
+    viewer(parent, args, { user }) {
       return accounts.find(account => account.id === user.sub);
     }
   },
   Mutation: {
-    login(_, { email, password }) {
+    login(parent, { email, password }) {
       const { id, permissions, roles } = accounts.find(
         account => account.email === email && account.password === password
       );
