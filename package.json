@@ -21,7 +21,7 @@
     "express-jwt": "^5.3.3",
     "graphql-middleware": "^4.0.2",
     "graphql-shield": "^7.2.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "nodemon": "^2.0.3",
     "wait-on": "^4.0.2"
   }
